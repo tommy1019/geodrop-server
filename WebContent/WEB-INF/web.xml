@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>geodrop-server</display-name>
+  
+  <servlet>
+    <servlet-name>GeoDrop</servlet-name>
+    <servlet-class>geodrop.servlets.GeoDrop</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetIfNearby</servlet-name>
+  	<servlet-class>geodrop.servlets.GetIfNearby</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddDrop</servlet-name>
+  	<servlet-class>geodrop.servlets.AddDrop</servlet-class>
+  </servlet>
+    <servlet>
+  	<servlet-name>GetDrops</servlet-name>
+  	<servlet-class>geodrop.servlets.GetDrops</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetDropsInRange</servlet-name>
+  	<servlet-class>geodrop.servlets.GetDropsInRange</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>Online</servlet-name>
+  	<servlet-class>geodrop.servlets.Online</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>GeoDrop</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetIfNearby</servlet-name>
+  	<url-pattern>/api/getifnearby</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddDrop</servlet-name>
+  	<url-pattern>/api/adddrop</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+  	<servlet-name>GetDrops</servlet-name>
+  	<url-pattern>/api/getdrops</url-pattern>
+  </servlet-mapping>
+      <servlet-mapping>
+  	<servlet-name>GetDropsInRange</servlet-name>
+  	<url-pattern>/api/getdropsinrange</url-pattern>
+  </servlet-mapping>
+        <servlet-mapping>
+  	<servlet-name>Online</servlet-name>
+  	<url-pattern>/api/online</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
